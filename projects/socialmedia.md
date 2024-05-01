@@ -84,6 +84,7 @@ GROUP BY Organization
 ORDER BY avg_dist DESC;
 ```
 Likewise, my approach to this analysis was informed by practical experience. I speculated that within various organizations, some would naturally afford more leisure time for individuals to log onto their apps and become distracted. Conversely, workplaces typically uphold codes of conduct and a sense of professionalism, leading me to hypothesize that levels of distraction would be lower in these settings. My hypothesis was validated, as individuals in school and university reported higher levels of distraction, with scores of 3 and 3.5, respectively. This stands in stark contrast to those employed in government positions, who reported an average distraction score of 2.2.
+
 ```sql
 -- 6: NUMBER OF SOCIAL MEDIA APPS & RELATIONSHIP STATUS
 SELECT RelationshipStatus, AVG(NumberofSocialMediaPlatforms) AS avg_apps
@@ -91,3 +92,13 @@ FROM smmh
 GROUP BY RelationshipStatus
 ORDER BY avg_apps DESC;
 ``` 
+The outcome may have initially contradicted my expectations, as individuals in relationships had the highest number of apps. However, upon deeper reflection and considering the data again, this finding becomes more understandable. It's plausible that this group, likely belonging to a younger demographic, is more tech-savvy and accustomed to using various apps. This generational inclination towards technology could explain the results. While this insight is intriguing, further investigation into the underlying factors driving app usage among individuals in relationships would be worthwhile.
+
+## Recommendations:
+Based on the analysis of the effect of social media on mental health, here are three recommendations:
+
+1. **Promote Digital Wellbeing Education**: Given the observed negative impact of excessive social media usage on sleep quality, organizations and educational institutions should prioritize digital wellbeing education. It was their students who scored poorly in these areas. Providing resources and workshops on healthy smartphone usage habits, including setting boundaries and limiting screen time before bedtime, can empower individuals to maintain better sleep hygiene and overall mental wellness.
+
+2. **Tailor Support Programs for Vulnerable Groups**: Recognizing that single individuals exhibited higher levels of anxiety, targeted support programs should be developed to address their specific needs. These programs could include counseling services, support groups, and stress management techniques tailored to address the unique challenges faced by single individuals.
+
+3. **Encourage Balanced Digital Engagement Across Age Groups**: While younger age groups displayed higher depression scores and engaged with multiple social media platforms, older individuals demonstrated lower depression scores despite active digital engagement. Encouraging balanced digital engagement and promoting activities and social events among younger age groups may help reduce the negative effects of social media on mental health. 
