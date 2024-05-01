@@ -9,9 +9,9 @@
 I sourced this dataset from Kaggle, accessible [here](https://www.kaggle.com/datasets/shabdamocharla/social-media-mental-health). As an educator, I've observed a significant surge in phone usage and social media engagement. This piqued my interest, prompting an in-depth exploration into the quantitative impacts of these platforms on users. This dataset offered an ample opportunity to analyze and understand these effects.
 
 ## Exploratory Data Analysis
-`My first task was to again take in the data and get an overall feel for it. It is important for me that I familiarise myself with the data and its labels so that I am not misinterpreting any information at a later point. This would take away any credibility from my fidnings. 
+My first task was to again take in the data and get an overall feel for it. It is important for me that I familiarise myself with the data and its labels so that I am not misinterpreting any information at a later point. This would take away any credibility from my findings. 
 
-It is also worth mentioning the Likert Scale is employed for this trial of 479 participants. The Likert Scale serves as a measurement tool for assessing various mental health effects, including depression levels. For instance, participants may rate their depression experiences on a scale of 1 to 5, where 1 signifies minimal depression and 5 indicates severe depression. This structured approach allows us to quantitatively analyze not only depression but also other variables such as anxiety, restlessness, and concentration difficulty. By utilizing this standardized scale across different constructs, we can capture and compare participants' feelings, allowing for accurate insights into mental health within our dataset.
+It is worth mentioning the Likert Scale is employed for this trial of 479 participants. The Likert Scale serves as a measurement tool for assessing various mental health effects, including depression levels. For instance, participants may rate their depression experiences on a scale of 1 to 5, where 1 signifies minimal depression and 5 indicates severe depression. This structured approach allows us to quantitatively analyze not only depression but also other variables such as anxiety, restlessness, and concentration difficulty. By utilizing this standardized scale across different constructs, we can capture and compare participants' feelings, allowing for accurate insights into mental health within our dataset.
 
 ```sql
 -- Inspecting the table for a broad view
@@ -68,21 +68,26 @@ Understanding the dataset nuances is crucial for accurate interpretation. While 
 
 ![](https://images.stockcake.com/public/f/0/8/f0825676-e186-4225-a5e2-35154161cd2e_large/joyful-social-browsing-stockcake.jpg)
 
-
+```sql
 -- 4: NUMBER OF PLATFORMS USED & SLEEP QUALITY
 SELECT NumberofSocialMediaPlatforms, AVG(Sleeplessness) AS avg_sleeplessness
 FROM smmh
 GROUP BY NumberofSocialMediaPlatforms
 ORDER BY avg_sleeplessness DESC;
-
+```
+The rationale behind this specific analysis was straightforward: examining our habits of using smartphones before bedtime. My hypothesis was that individuals with a higher number of social media applications would tend to stay up later engaging with them. As anticipated, having between 6 and 9 active social media platforms proved to have a negative impact on sleep quality. The average scores for sleeplessness in these groups ranged from 3.5 to 3.9. Conversely, individuals with fewer apps experienced better sleep, with average sleeplessness scores ranging from 2.7 to 3.1.
+```sql    
 -- 5: ORGANIZATION TYPE AND LEVEL OF DISTRACTION
 SELECT Organization, AVG(Distraction) AS avg_dist
 FROM smmh
 GROUP BY Organization
 ORDER BY avg_dist DESC;
-
+```
+Likewise, my approach to this analysis was informed by practical experience. I speculated that within various organizations, some would naturally afford more leisure time for individuals to log onto their apps and become distracted. Conversely, workplaces typically uphold codes of conduct and a sense of professionalism, leading me to hypothesize that levels of distraction would be lower in these settings. My hypothesis was validated, as individuals in school and university reported higher levels of distraction, with scores of 3 and 3.5, respectively. This stands in stark contrast to those employed in government positions, who reported an average distraction score of 2.2.
+```sql
 -- 6: NUMBER OF SOCIAL MEDIA APPS & RELATIONSHIP STATUS
 SELECT RelationshipStatus, AVG(NumberofSocialMediaPlatforms) AS avg_apps
 FROM smmh
 GROUP BY RelationshipStatus
 ORDER BY avg_apps DESC;
+``` 
