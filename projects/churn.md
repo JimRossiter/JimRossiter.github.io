@@ -1,9 +1,12 @@
 # Banking Customer Churn Analysis:
 *01 May 2024*
+
+
 ![](https://images.stockcake.com/public/1/9/f/19fabc82-245f-4bda-9db7-de541d0912b7_large/banking-service-area-stockcake.jpg)
 
+
 ## Background
-I obtained this dataset from Kaggle to hone my SQL skills. The subject matter intrigued me due to my interest in the banking industry, and the dataset offered ample opportunities for exploratory analysis. Churn analysis, like the one conducted here, holds significant importance for banks, enabling them to identify behavioral patterns among retained and churned customers. Understanding the factors surrounding customer churn is crucial, as recognizing trends can empower banks to take proactive measures, ultimately leading to enhanced retention rates. Insights derived from data-driven approaches, such as this project, have the potential to streamline management processes and enhance the overall banking experience for customers.
+I obtained [this dataset](https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn) from Kaggle to hone my SQL skills. The subject matter intrigued me due to my interest in the banking industry, and the dataset offered ample opportunities for exploratory analysis. Churn analysis, like the one conducted here, holds significant importance for banks, enabling them to identify behavioral patterns among retained and churned customers. Understanding the factors surrounding customer churn is crucial, as recognizing trends can empower banks to take proactive measures, ultimately leading to enhanced retention rates. Insights derived from data-driven approaches, such as this project, have the potential to streamline management processes and enhance the overall banking experience for customers.
 
 The primary goal was to scrutinize the dataset and unveil patterns or trends that could prompt bank management to intervene and mitigate churn rates. Given that acquiring new clients is considerably more expensive than retaining existing ones, the emphasis on data analysis in business becomes imperative.
 
