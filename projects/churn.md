@@ -13,7 +13,7 @@ The primary goal was to scrutinize the dataset and unveil patterns or trends tha
 ## Data Integrity
 The initial step involved ensuring the cleanliness and accuracy of the dataset to facilitate precise results. This entailed checking for any duplicates or null values within the dataset. Maintaining data integrity is paramount as it forms the foundation for delivering insights and any compromise in this aspect can undermine the credibility of the results.
 ```sql
-- I wish to analyse this dataset from a bank to try and predict the customer churn rate. 
+-- I wish to analyse this dataset from a bank to try and predict the customer churn rate. 
 -- First, I want to inspect the data and familiarise myself with the column headers:
 SELECT *
 FROM customers
