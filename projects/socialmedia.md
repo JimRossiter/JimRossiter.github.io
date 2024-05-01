@@ -11,6 +11,8 @@ I sourced this dataset from Kaggle, accessible [here](https://www.kaggle.com/dat
 ## Exploratory Data Analysis
 `My first task was to again take in the data and get an overall feel for it. It is important for me that I familiarise myself with the data and its labels so that I am not misinterpreting any information at a later point. This would take away any credibility from my fidnings. 
 
+It is also worth mentioning the Likert Scale is employed for this trial of 479 participants. The Likert Scale serves as a measurement tool for assessing various mental health effects, including depression levels. For instance, participants may rate their depression experiences on a scale of 1 to 5, where 1 signifies minimal depression and 5 indicates severe depression. This structured approach allows us to quantitatively analyze not only depression but also other variables such as anxiety, restlessness, and concentration difficulty. By utilizing this standardized scale across different constructs, we can capture and compare participants' feelings, allowing for accurate insights into mental health within our dataset.
+
 ```sql
 -- Inspecting the table for a broad view
 SELECT*
