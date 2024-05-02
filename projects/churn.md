@@ -180,3 +180,20 @@ GROUP BY cust_status, cust_act;
 - France and Germany exhibited approximately twice the number of churned customers compared to Spain. In light of this, I recommend that the bank conduct a thorough review of its operations in these regions.
 - It's noteworthy that all churned customers have a recorded complaint on file. This observation suggests a potential area for improvement within the bank's customer service department. Timely resolution of these issues could potentially lower churn rates. Prioritizing the needs and preferences of customers should be a focus. By addressing customer complaints promptly and effectively, the bank can enhance customer satisfaction and loyalty.
 - Customer activity proves to be crucial, as inactive members who churned were twice the number of active members who churned. To address this, the bank should consider implementing engaging customer service initiatives and introducing more enticing programs such as loyalty rewards and bonuses. By enhancing the overall customer experience, the bank can encourage greater customer retention and loyalty.
+
+
+
+
+```sql
+# RowNumber, CustomerId, Surname, CreditScore, Geography, Gender, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary, Exited, Complain, Satisfaction Score, card_type, Point Earned
+'1', '15634602', 'Hargrave', '619', 'France', 'Female', '42', '2', '0', '1', '1', '1', '101348.88', '1', '1', '2', 'DIAMOND', '464'
+'2', '15647311', 'Hill', '608', 'Spain', 'Female', '41', '1', '83807.86', '1', '0', '1', '112542.58', '0', '1', '3', 'DIAMOND', '456'
+'3', '15619304', 'Onio', '502', 'France', 'Female', '42', '8', '159660.8', '3', '1', '0', '113931.57', '1', '1', '3', 'DIAMOND', '377'
+'4', '15701354', 'Boni', '699', 'France', 'Female', '39', '1', '0', '2', '0', '0', '93826.63', '0', '0', '5', 'GOLD', '350'
+'5', '15737888', 'Mitchell', '850', 'Spain', 'Female', '43', '2', '125510.82', '1', '1', '1', '79084.1', '0', '0', '5', 'GOLD', '425'
+'6', '15574012', 'Chu', '645', 'Spain', 'Male', '44', '8', '113755.78', '2', '1', '0', '149756.71', '1', '1', '5', 'DIAMOND', '484'
+'7', '15592531', 'Bartlett', '822', 'France', 'Male', '50', '7', '0', '2', '1', '1', '10062.8', '0', '0', '2', 'SILVER', '206'
+'8', '15656148', 'Obinna', '376', 'Germany', 'Female', '29', '4', '115046.74', '4', '1', '0', '119346.88', '1', '1', '2', 'DIAMOND', '282'
+'9', '15792365', 'He', '501', 'France', 'Male', '44', '4', '142051.07', '2', '0', '1', '74940.5', '0', '0', '3', 'GOLD', '251'
+'10', '15592389', 'H?', '684', 'France', 'Male', '27', '2', '134603.88', '1', '1', '1', '71725.73', '0', '0', '3', 'GOLD', '342'
+``` 
