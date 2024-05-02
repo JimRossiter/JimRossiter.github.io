@@ -24,6 +24,8 @@ SELECT COUNT(DISTINCT CustomerId) AS ids, Count(*) AS total_rows
 FROM customers;
 -- There are 10,000 rows filled with unique customer IDs and no null values
 ```
+
+
 | RowNumber | CustomerId | Surname   | CreditScore | Geography | Gender | Age | Tenure | Balance    | NumOfProducts | HasCrCard | IsActiveMember | EstimatedSalary | Exited | Complain | Satisfaction Score | card_type | Point Earned |
 |-----------|------------|-----------|-------------|-----------|--------|-----|--------|------------|---------------|-----------|----------------|-----------------|--------|----------|---------------------|-----------|---------------|
 | 1         | 15634602   | Hargrave  | 619         | France    | Female | 42  | 2      | 0          | 1             | 1         | 1              | 101348.88       | 1      | 1        | 2                   | DIAMOND   | 464           |
@@ -31,6 +33,8 @@ FROM customers;
 | 3         | 15619304   | Onio      | 502         | France    | Female | 42  | 8      | 159660.8   | 3             | 1         | 0              | 113931.57       | 1      | 1        | 3                   | DIAMOND   | 377           |
 | 4         | 15701354   | Boni      | 699         | France    | Female | 39  | 1      | 0          | 2             | 0         | 0              | 93826.63        | 0      | 0        | 5                   | GOLD      | 350           |
 | 5         | 15737888   | Mitchell  | 850         | Spain     | Female | 43  | 2      | 125510.82  | 1             | 1         | 1              | 79084.1         | 0      | 0        | 5                   | GOLD      | 425           |
+
+
 
 
 | ids   | total_rows |
@@ -74,6 +78,8 @@ WHERE c.Exited = '1'
 GROUP BY Gender, gt.gender_count;
 ```
 In the initial part of this query, I utilized a Common Table Expression (CTE) to compute the total count of male and female customers, encompassing both churned and retained. Then, in the subsequent section, I constructed a join to analyze the count of male and female customers who churned, expressing these figures as percentages relative to the overall churned customer base.
+
+
 | Gender | gender_count | churns | pct_gender |
 |--------|--------------|--------|------------|
 | Female | 4543         | 1139   | 55.9       |
@@ -100,6 +106,8 @@ ORDER BY age_group ASC;
 ```
 
 I opted to segment the age demographics into evenly spaced bins. This segmentation facilitates the bank in targeting specific demographics with tailored marketing and advertisements, thereby enhancing retention rates. This strategy not only boosts efficiency but also minimizes resource wastage and streamlines operational processes.
+
+
 | age_group | age_churns |
 |-----------|------------|
 | 10-20     | 5          |
@@ -117,6 +125,8 @@ FROM customers
 WHERE Exited = '1'
 GROUP BY Geography;
 ```
+
+
 | Geography | total_churned |
 |-----------|---------------|
 | France    | 811           |
@@ -149,6 +159,8 @@ WHERE Exited = '1'
 GROUP BY credit_score_group
 ORDER BY credit_score_group ASC;
 ```
+
+
 | credit_score_group | total |
 |--------------------|-------|
 | 350-450            | 61    |
@@ -156,6 +168,8 @@ ORDER BY credit_score_group ASC;
 | 550-650            | 689   |
 | 650-750            | 667   |
 | 750-850            | 314   |
+
+
 
 ```sql
 -- B: Customer Complaints
@@ -172,6 +186,8 @@ FROM customers
 WHERE Exited = '1'
 GROUP BY card_type;
 ```
+
+
 | total_complaints | total_exits |
 |------------------|-------------|
 | 2034             | 2034        |
@@ -244,6 +260,8 @@ SELECT
 FROM customers
 GROUP BY customer_status;
 ```
+
+
 | CustomerID | EstimatedSalary |
 |------------|-----------------|
 | 15815656   | 199808.1        |
@@ -279,6 +297,8 @@ GROUP BY cust_status, cust_act;
 | Retained    | 4416        | Active    |
 | Churned     | 1303        | Inactive  |
 | Retained    | 3546        | Inactive  |
+
+
 
 ## Findings & Recommnedations
 - Female customers comprised approximately 56% of the churned customers. Based on this data, there isn't substantial evidence to suggest a significant gender disparity. Therefore, I recommend that the bank not prioritize addressing gender-related concerns at this time.
