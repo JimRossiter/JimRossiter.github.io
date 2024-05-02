@@ -53,6 +53,8 @@ FROM customers
 WHERE Exited = '1';
 ```
 Before diving deeper into demographics, it was essential to figure out how many customers churned overall. This helped set the stage for later analyses, where I planned to break down specific groups as percentages of the total churned customers.
+
+
 | total_churn |
 |-------------|
 | 2038        |
