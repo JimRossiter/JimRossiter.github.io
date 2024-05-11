@@ -13,6 +13,7 @@ The data used for analysis encompasses match statistics from multiple seasons of
 
 ## Analysis and Results
 1. **Top Scoring Teams**: Identifying the top three scoring teams in the tournament based on their home game scores.
+   
 ```sql
 SELECT TEAM_NAME_HOME, TEAM_HOME_SCORE
 FROM uefa2020
@@ -59,6 +60,7 @@ LIMIT 5;
 ![](https://assets.goal.com/images/v3/blte092c3a8fb02c79b/Kylian_Mbappe_PSG_2023-24_(13).jpg?auto=webp&format=pjpg&width=3840&quality=60)
 
 3. **Average Shots on Target & Winning Away from Home**: Computing the average shot percentage for away teams and analysing their wins.
+
 ```sql
 WITH COMBINE1 AS (
     SELECT ROUND(AVG(TOTAL_SHOTS_AWAY),2) AS AVG_AWAY_SHOTS_AWAY_WINS, 
@@ -87,7 +89,8 @@ CROSS JOIN COMBINE2;
 
 
 4. **Average Possession by Team**: Determine the team with the highest average possession throughout the season.
-   ```sql
+
+```sql
    WITH POSSESSION AS (
 SELECT TEAM_NAME_HOME AS TEAM_NAME, 
     ROUND(AVG(POSSESSION_HOME),2) AS POSS, 
@@ -117,6 +120,7 @@ LIMIT 5;
 | Ajax           | 56.2         | 10        |
 
 5. **Home Team Win Percentage**: Calculating the overall win percentage for home teams.
+   
 ```sql
 SELECT 
 SUM(CASE WHEN TEAM_HOME_SCORE > TEAM_AWAY_SCORE THEN 1 ELSE 0 END) AS HOME_WINS,
@@ -130,6 +134,8 @@ FROM UEFA_ALL;
 | 168       | 374         | 44.92        |
 
 6. **Draw Percentage**: Computing the percentage of matches that ended in draws.
+
+
 ```sql
 SELECT 
 SUM(CASE WHEN TEAM_HOME_SCORE = TEAM_AWAY_SCORE THEN 1 ELSE 0 END) AS DRAWS,
@@ -190,6 +196,8 @@ WHERE TEAM_HOME_SCORE>=TEAM_AWAY_SCORE AND POSSESSION_HOME<30;
 ![](https://i.ytimg.com/vi/BYaz43TkeMQ/maxresdefault.jpg)
 
 9. **Correlation Between Shots on Target and Score Difference**: Investigating if there's a correlation between the number of shots on target and the final score difference.
+
+
 ```sql
 WITH WinningTeamShots AS (
     SELECT
@@ -217,6 +225,8 @@ ORDER BY SCORE_DIFF;
 
 
 10. **Possession Percentage Across Tournament Stages**: Examining how the distribution of possession percentage varies across different stages of the tournament.
+
+
 ```sql
 WITH POSS_DIFF AS
 (SELECT STAGE,
