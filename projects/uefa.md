@@ -1,18 +1,18 @@
-## Background
+# Background
 The UEFA Champions League is one of the most prestigious football competitions in the world, showcasing top European football clubs competing for glory. Analyzing match data from the tournament can provide valuable insights into team performance, player strategies, and match dynamics.
 
 
 ![](https://i.pinimg.com/originals/d6/81/85/d681852ff7d04442e8da535a288968d8.png)
 
 
-## Motivation
+# Motivation
 Understanding the patterns and trends within the UEFA Champions League matches can aid coaches, analysts, and enthusiasts in refining strategies, predicting outcomes, and gaining a deeper appreciation for the game.
 
-## The Data
+# The Data
 The data used for analysis encompasses match statistics from multiple seasons of the UEFA Champions League, including team names, scores, possession percentages, duels won, shots on target, and match locations.
 
-## Analysis and Results
-1. **Top Scoring Teams**: Identifying the top three scoring teams in the tournament based on their home game scores.
+# Analysis and Results
+## 1. **Top Scoring Teams**: Identifying the top three scoring teams in the tournament based on their home game scores.
    
 ```sql
 SELECT TEAM_NAME_HOME, TEAM_HOME_SCORE
@@ -32,7 +32,7 @@ LIMIT 3;
 
 From the output, it's evident that Bayern Munich and Man City are the top-scoring teams, both with a total of 28 goals and an average of 3.50 goals per game across 8 games. PSG follows closely behind with 22 goals scored in 7 games, averaging 3.14 goals per game. Other notable teams include Benfica and Liverpool, with 21 and 18 goals respectively. This analysis helps in understanding the offensive prowess of each team in the tournament. This translates into such teams reaching the latter stages of the competition on a regular basis. 
 
-2. **Teams Losing Despite Duel Wins**: Identifying teams that lost matches despite winning more duels.
+## 2. **Teams Losing Despite Duel Wins**: Identifying teams that lost matches despite winning more duels.
 
 ```sql
 SELECT TEAM_LOST, COUNT(*) AS LOST_WITH_DUELS_WON
@@ -62,7 +62,7 @@ The analysis identifies instances where a team's success in winning duels didn't
 
 ![](https://assets.goal.com/images/v3/blte092c3a8fb02c79b/Kylian_Mbappe_PSG_2023-24_(13).jpg?auto=webp&format=pjpg&width=3840&quality=60)
 
-3. **Average Shots on Target & Winning Away from Home**: Computing the average shot percentage for away teams and analysing their wins.
+## 3. **Average Shots on Target & Winning Away from Home**: Computing the average shot percentage for away teams and analysing their wins.
 
 ```sql
 WITH COMBINE1 AS (
@@ -91,7 +91,7 @@ CROSS JOIN COMBINE2;
 
 The resulting table unveils that away teams, on average, managed 15.43 shots on target in matches they won, accumulating a total of 130 victories. Conversely, in matches where the away team faced defeat, the average shots on target dropped to 12.04, with a total of 168 losses recorded. This analysis sheds light on the significance of shot accuracy and offensive efficiency in determining match outcomes for away teams. It underscores the importance of clinical finishing and strategic execution, especially in away fixtures where teams face additional challenges. 
 
-4. **Average Possession by Team**: Determine the team with the highest average possession throughout the season.
+## 4. **Average Possession by Team**: Determine the team with the highest average possession throughout the season.
 
 ```sql
    WITH POSSESSION AS (
@@ -124,7 +124,7 @@ LIMIT 5;
 
 At the pinnacle here stands Man City, exhibiting remarkable ball control with an average possession of 59.94%, correlating with 26 wins. Barcelona closely trails with 59.55%, but only securing 9 victories. Bayern Munich follows suit with 58.92% possession and a cconsiderable 22 wins. Further down the list, Napoli and Ajax demonstrate formidable possession statistics of 56.4% and 56.2%, respectively, coupled with 7 and 10 victories. This analysis underscores the correlation between ball possession and match success, emphasizing the strategic importance of maintaining control over the game's tempo and rhythm.
 
-5. **Home Team Win Percentage**: Calculating the overall win percentage for home teams.
+## 5. **Home Team Win Percentage**: Calculating the overall win percentage for home teams.
    
 ```sql
 SELECT 
@@ -140,7 +140,7 @@ FROM UEFA_ALL;
 
 This statistic underscores the significance of home-field advantage and the pivotal role it plays in shaping match outcomes.
 
-6. **Draw Percentage**: Computing the percentage of matches that ended in draws.
+## 6. **Draw Percentage**: Computing the percentage of matches that ended in draws.
 
 
 ```sql
@@ -157,7 +157,7 @@ FROM UEFA_ALL;
 
 Draws reflect the closely contested nature of matches and serve as a testament to the parity among participating teams.
 
-7. **Away Team Win Percentage**: Determining the overall win percentage for away teams.
+## 7. **Away Team Win Percentage**: Determining the overall win percentage for away teams.
 
 ```sql
 SELECT 
@@ -175,7 +175,7 @@ FROM UEFA_ALL;
 This statistic highlights the ability of teams to perform effectively in unfamiliar environments and underscores the importance of tactical acumen and adaptability in securing positive results away from home.
 
 
-8. **Outliers in Possession Percentage**: Identifying any outliers in possession percentage.
+## 8. **Outliers in Possession Percentage**: Identifying any outliers in possession percentage.
 
 ```sql
 SELECT ROUND(AVG(POSSESSION_HOME),2) AS AVG_POSS_H
@@ -208,7 +208,7 @@ One very noticeable fixture here is Inter Milan v Barcelona. Despite only having
 
 ![](https://i.ytimg.com/vi/BYaz43TkeMQ/maxresdefault.jpg)
 
-9. **Correlation Between Shots on Target and Score Difference**: Investigating if there's a correlation between the number of shots on target and the final score difference.
+## 9. **Correlation Between Shots on Target and Score Difference**: Investigating if there's a correlation between the number of shots on target and the final score difference.
 
 
 ```sql
@@ -240,7 +240,7 @@ As we observe the data, there seems to be a positive correlation between the sco
 
 This suggests that teams tend to score more goals when they have a higher number of shots on target, resulting in a larger margin of victory. 
 
-10. **Possession Percentage Across Tournament Stages**: Examining how the distribution of possession percentage varies across different stages of the tournament.
+## 10. **Possession Percentage Across Tournament Stages**: Examining how the distribution of possession percentage varies across different stages of the tournament.
 
 
 ```sql
@@ -272,7 +272,7 @@ GROUP BY STAGE_NAME;
 
 We observe fluctuations in possession percentage across different stages. In the Group Stages, teams tend to have a possession percentage of approximately 58.53%, which slightly increases as the tournament progresses. Notably, possession percentages peak during the Round of 16 and Quarterfinals, with averages of 60.94% and 60.54%, respectively. This suggests that teams may prioritize ball possession during the knockout stages of the tournament, possibly to control the pace of the game and create scoring opportunities. Interestingly, possession percentages dip slightly during the Semifinals and Finals, possibly indicating more balanced gameplay and intense competition as teams vie for the championship title.
 
-11. **Wins by Home Venue**: Identifying locations where teams have secured the most wins, excluding finals matches.
+## 11. **Wins by Home Venue**: Identifying locations where teams have secured the most wins, excluding finals matches.
 
 ```sql
 SELECT LOCATION, COUNT(*) AS WINS, TEAM_NAME_HOME
