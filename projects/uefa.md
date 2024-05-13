@@ -310,7 +310,7 @@ Santiago Bernabeu, the iconic stadium of Real Madrid, shares the third position 
 
 Anfield, the legendary home ground of Liverpool, completes the top five list with 7 wins. Liverpool's passionate fan base and strong performances at Anfield contribute to their success on home soil.
 
-![](https://res.cloudinary.com/brentford-fc/image/upload/f_auto,q_auto:best,f_auto,q_100,c_fill,ar_16:9/Production/Etihad_GV_2_girunv.jpg) 
+![](https://assets.goal.com/images/v3/blte3bcf29c9f9d32b2/Champions_League_trophy.png) 
 
 
 These analyses provide valuable insights into various aspects of UEFA Champions League matches, aiding in strategic planning, performance evaluation, and understanding match dynamics.
