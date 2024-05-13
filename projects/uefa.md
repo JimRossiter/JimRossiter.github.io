@@ -15,10 +15,19 @@ The data used for analysis encompasses match statistics from multiple seasons of
 ## 1. **Top Scoring Teams**: Identifying the top three scoring teams in the tournament based on their home game scores.
    
 ```sql
-SELECT TEAM_NAME_HOME, TEAM_HOME_SCORE
-FROM uefa2020
-ORDER BY TEAM_HOME_SCORE DESC
-LIMIT 3;
+WITH COMBINED AS 
+(SELECT TEAM_NAME_HOME AS TEAM, TEAM_HOME_SCORE AS GOALS_SCORED
+FROM UEFA_ALL
+UNION
+SELECT TEAM_NAME_AWAY AS TEAM, TEAM_AWAY_SCORE AS GOALS_SCORED
+FROM UEFA_ALL)
+
+SELECT TEAM, SUM(GOALS_SCORED) AS TOTAL_GOALS, MAX(GOALS_SCORED) AS 1_GAME_MAX, ROUND(AVG(GOALS_SCORED),2) AS AVG_GOALS_PER_G,
+COUNT(*) AS GAMES_PLAYED
+FROM COMBINED
+GROUP BY TEAM
+ORDER BY TOTAL_GOALS DESC
+LIMIT 5;
 ```
 
 | Team           | Total Goals | 1 Game Max | Avg Goals Per Game | Games Played |
