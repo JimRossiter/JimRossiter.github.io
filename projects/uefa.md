@@ -52,15 +52,15 @@ LIMIT 5;
 
 | Team               | Lost with Duels Won |
 |--------------------|----------------------|
+| Atletico Madrid   | 6                    |
 | PSG                | 5                    |
 | Chelsea            | 5                    |
-| FC Porto           | 3                    |
-| Bayern Munich      | 2                    |
-| RB Leipzig         | 4                    |
+| Barcelona          | 5                    |
+| Marseille          | 5                    |
 
-The analysis identifies instances where a team's success in winning duels didn't translate into match victory. The resulting table illuminates several notable teams grappling with this anomaly. PSG and Chelsea top the list, each enduring 5 losses despite winning more duels in the respective matches. Following closely are FC Porto with 3 instances and Bayern Munich with 2. RB Leipzig rounds up the list, encountering 4 defeats despite prevailing in duels. This analysis underscores the complexity of match outcomes, emphasizing that success in certain performance metrics doesn't always guarantee victory on the scoreboard. It prompts further exploration into the interplay between tactical strategies, individual player performances, and overall team dynamics contributing to results.
+Atletico Madrid stands out with 6 such losses, followed by PSG, Chelsea, Barcelona, and Marseille, each with 5 losses under similar circumstances. These numbers highlight the intriguing aspect of soccer where dominance in certain aspects of the game doesn't always translate into victory.
 
-![](https://assets.goal.com/images/v3/blte092c3a8fb02c79b/Kylian_Mbappe_PSG_2023-24_(13).jpg?auto=webp&format=pjpg&width=3840&quality=60)
+![](https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/01/13/15789472789047.jpg)
 
 ## 3. **Average Shots on Target & Winning Away from Home**: Computing the average shot percentage for away teams and analysing their wins.
 
