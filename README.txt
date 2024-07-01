@@ -1,33 +1,27 @@
-Directive by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# My Portfolio - feel free to browse the webpage [here](jimrossiter.github.io)
 
+Welcome to my portfolio! In this repository, I share various data analytics projects that demonstrate my skills and expertise in the field. Each project involves data cleaning, exploratory data analysis (EDA), and visualization using Python and relevant libraries.
 
-A simple single pager built around an angular motif (powered by SVG awesomeness).
-Should work great for a landing page. Also includes default styling for a bunch of
-standard page elements (uncomment the huge block of commented-out HTML to see it).
+## Projects
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+1. **Analysis of Cha,pions League 2020-2022**
+   - Utulised Kagdle datset and completed analysis using SQL.
+   - Analyzed winning-losing ratios, best/worst home & away records, and more.
+    
 
-(* = Not included)
+2. **Bank customer churn analysis**
+   - Explored factors based on location, experience level, work mode, and salary ranges.
 
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
+3. **Student Mental Health**
+   - Utilized Kaggle dataset.
+   - Carried out complex analaysis of large survey to predict students at risk of mental health difficulties.
 
-AJ
-aj@lkn.io | @ajlkn
+## Technology Stack
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+- Python
+- Pandas
+- SQL
+- Power BI
+- Matplotlib
+- Jupyter Notebook
 
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
