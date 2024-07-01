@@ -1,4 +1,4 @@
-# My Portfolio - feel free to browse the webpage [here](jimrossiter.github.io)
+# My Portfolio - feel free to browse the webpage [here](https://jimrossiter.github.io/)
 
 Welcome to my portfolio! In this repository, I share various data analytics projects that demonstrate my skills and expertise in the field. Each project involves data cleaning, exploratory data analysis (EDA), and visualization using Python and relevant libraries.
 
