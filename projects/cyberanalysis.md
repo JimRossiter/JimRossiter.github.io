@@ -4,4 +4,4 @@ I am currently engaged in the KC7 Cybersecurity Analysis, a gamified simulation 
 Key skills developed so far include proficiency in Kusto Query Language (KQL), investigative and problem-solving abilities, and the capability to assess and respond to cybersecurity threats effectively. This program is significantly enhancing my practical experience and expertise in cybersecurity analysis.
 
 # Please see some of my work here:
-1. [A Scandal in Valdoria](/kc7/ascandalinvaldoria.md)
+1. [A Scandal in Valdoria](/kc7/ascandalinvaltoria.md)
