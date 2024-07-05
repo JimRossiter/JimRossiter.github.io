@@ -29,8 +29,7 @@ Email
 7. How many distinct websites did “Lois Lane” visit?
 ```kql
 Employees
-| where name == 'Lois Lane'
-
+| where name == 'Lois Lane';
 OutboundNetworkEvents
 | where src_ip == '10.10.0.22'
 | distinct url
