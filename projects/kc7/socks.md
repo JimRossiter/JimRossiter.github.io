@@ -1,6 +1,7 @@
 # French Socksess Story: A Forensic Investigation Using Kusto Query Language
+![https://nm0g0vqj.tinifycdn.com/photos/sockspic.png]
 
-### Author: [Your Name]
+### Author: Jim Rossiter
 
 ---
 
