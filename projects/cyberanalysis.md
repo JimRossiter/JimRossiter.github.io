@@ -5,3 +5,4 @@ Key skills developed so far include proficiency in Kusto Query Language (KQL), i
 
 # Please see some of my work here:
 1. [Balloons Over Iowa](/kc7/balloons.md)
+2. [A French Socksess Story](/kc7/socks.md) 
