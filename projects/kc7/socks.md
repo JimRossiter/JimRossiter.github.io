@@ -1,4 +1,4 @@
-# French Sockcess Story: A Forensic Investigation Using Kusto Query Language
+# French Socksess Story: A Forensic Investigation Using Kusto Query Language
 
 ### Author: [Your Name]
 
