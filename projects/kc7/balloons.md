@@ -1,5 +1,5 @@
 # Balloons Over Iowa: A Forensic Investigation Using Kusto Query Language
-![https://nm0g0vqj.tinifycdn.com/photos/balloons_main.jpeg]
+![](https://nm0g0vqj.tinifycdn.com/photos/balloons_main.jpeg)
 ### Author: Jim Rossiter
 
 ---
